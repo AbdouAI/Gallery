@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/wrist-watch.png"> 
+  <link rel="stylesheet" href="pay.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <title>Set up paying methode | Gallery</title>
+</head>
+<body>
+  <main>
+    <div class="bg-main">
+      <div class="cards-container">
+        <div class="b-card">
+          <p id="b-card-cvc">000</p>
+        </div>
+        <div class="f-card">
+          <div class="inner">
+            <img src="images/card-logo.svg" alt="LogoExample" class="f-card-logo">
+            <p id="number">0000 0000 0000 0000</p>
+            <div class="name-exp">
+              <p id="name">Jane Appleseed</p>
+              <p id="exp-date">00/00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-confirmedP-box" id="form-confirmedP-box">
+      <form action="" method="post" id="form">
+        <label for="name">CARDHOLDER NAME</label>
+        <input type="text" id="input-name"  placeholder="e.g. Jane Appleseed" name="name"  maxlength="30">
+        <span id="nameER"></span>
+        <label for="name">ADDRESS</label>
+        <input type="text" id="input-adrs"  name="addrs"  maxlength="40">
+        <span id="adrsER"></span>
+        <label for="number">CARD NUMBER</label>
+        <input type="text" id="input-number"  placeholder="e.g. 1234 5678 9123 0000" name="number" >
+        <span id="numberER"></span>
+        <div class="input-date-cvc">
+          <div class="date-label">
+            <label>EXP. DATE (MM/YY)</label><br>
+            <input type="number" id="input-month"  placeholder="MM" name="month">
+            <input type="number" id="input-year"  placeholder="YY" name="year">
+            <span id="dateER"></span>
+          </div>
+          
+          <div class="cvc-label">
+            <label for="cvc">CVC</label><br>
+            <input type="number" id="input-cvc"  placeholder="e.g. 123" name="cvc"><br>
+            <span id="cvcER"></span>
+          </div> 
+        </div>
+        <label>PAYMENT METHODE</label>
+        <div class="pay-methode">
+          <input type="radio"  name="payM" value="mc" class="card" checked>
+          <img src="images/ms.png" alt="">
+          <input type="radio"  name="payM" class="card" value="vc"> 
+          <img src="images/vs.png" alt=""> 
+          <input type="radio"  name="payM" class="pl" value="pl"> 
+          <img src="images/pl.png" alt="">  
+        </div>
+        
+        <a href="https://www.paypal.com/fr/webapps/mpp/home" target="_blank" class="no-display">
+          <img src="images/pl.png" alt="">
+          <h6>Complete your checkout on paypal</h6> 
+        </a>
+        <input type="submit" id="input-btn" value="Confirm">
+      </form>
+      <div class="flex-content no-display" id="completeP">
+        <div class="content">
+            <img src="images/icon-complete.svg" alt="Check Mark" class="icon-compconste">
+            <h1>THANK YOU!</h1>
+            <p>We've added your card details</p>
+            <p>(Make sure to checkout after payment setup)</p>
+            <input type="button" class="btnDone" value="Continue" onclick="location='../index/index.html'">
+            <input type="button" class="btnDone" value="Reset" onclick="reset()">
+
+        </div>
+      </div>
+    </div>
+    <script src="pay.js"></script>
+  </main>
+</body>
+</html>

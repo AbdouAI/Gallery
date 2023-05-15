@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/wrist-watch.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="product.css">
+  <title>Gallery</title>
+
+
+</head>
+<body>
+  <header>
+    <div class="success-msg">
+      Your order has been placed successfully!
+    </div>
+    <div class="menu"  id="menu" aria-label="open menu">
+      <img src="../images/icon-menu.svg" alt="menu icon">
+    </div>
+    <a href="../index/index.html">
+      <h1>Gallery</h1>
+    </a>
+    <div class="curtain no-display" id="curtain"></div>
+    <div class="menu-box" id="menuBox">
+      <div id="closeMenu">
+        <img src="../images/icon-close.svg" alt="close">
+      </div>
+      <ul id="menuList">
+        <li class="firstLi"><a href="../index/index.html#luxury" >Collection</a><div class="underline"></div></li>
+        <ul class="guide-mobile">
+          <a href="../index/index.html#luxury">Luxury</a>
+          <a href="../index/index.html#sport">Sport</a>
+          <a href="../index/index.html#women">Women</a>
+          <a href="../index/index.html#men">Men</a>
+          <a href="../index/index.html#unique">Unique Watches</a>
+        </ul>
+        <li><a href="https://www.facebook.com">Contact</a><div class="underline"></div></li>
+        <li><a href="../pay/pay.html">Configurer methode de paiement</a><div class="underline"></div></li>
+      </ul>
+    </div>
+    <div class="cart" id="basket" aria-label="cart">
+      <div class="cart-notif no-visible" id="cartNotif">0</div>
+      <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg> 
+    </div>
+    <div class="avatar">
+      <img src="../images/image-avatar.png" alt="avatar">
+    </div>
+  </header>
+  <main>
+    <div class="basket no-display" id="basketBox">
+      <div class="word-cart">Cart</div>
+      <div class="inner-basket" id="innerBasket">
+        <div class="empty-cart-style">Your cart is empty</div>
+        <div class="cart-total-div no-display" id="cartTotalDiv">
+          <span>Total: </span><span id="cartTotal">0</span>
+        </div>
+        <button id="checkoutBtn" class="no-display">Checkout</button>
+      </div>
+    </div>
+    <div class="collection-guide no-display">
+      <div class="guide">
+        <ul>
+          <li><a href="../index/index.html#luxury">Luxury</a></li>
+          <li><a href="../index/index.html#sport">Sport</a></li>
+          <li><a href="../index/index.html#women">Women</a></li>
+          <li><a href="../index/index.html#men">Men</a></li>
+          <li><a href="../index/index.html#unique">Unique Watches</a></li>
+        </ul>
+      </div>
+      <div class="guide-img"></div>
+    </div>
+    <div class="product-modal no-display" id="productModal">
+      <div class="inner-modal">
+        <div class="close-m" id="closeIcon" aria-label="close lightbox">
+          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#ffffff" fill-rule="evenodd"/></svg>
+        </div>
+        <div class="main-img-m" id="mainImgM">
+          <div class="arrows left-arrow" aria-label="previous image">
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>  
+          </div>
+          <div class="arrows right-arrow" aria-label="next image">
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+          </div>
+        </div>
+        <div class="img-selection-m" id="imgSelectionM">
+          <div class="selection-imgs selected-img-border" aria-label="image one">
+            <div class="selected-img-filter"></div>
+          </div>
+          <div class="selection-imgs" aria-label="image two">
+            <div></div>
+          </div>
+          <div class="selection-imgs" aria-label="image three">
+            <div></div>
+          </div>
+          <div class="selection-imgs" aria-label="image four">
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="productImg" id="productImg">
+      <div class="arrows left-arrow" aria-label="previous image">
+        <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+      </div>
+      <div class="arrows right-arrow" aria-label="next image">
+        <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+      </div>
+      <div class="main-img" id="mainImg"></div>
+      <div class="img-selection" id="imgSelection">
+        <div class="selection-imgs selected-img-border" aria-label="image one">
+          <div class="selected-img-filter"></div>
+        </div>
+        <div class="selection-imgs" aria-label="image two">
+          <div></div>
+        </div>
+        <div class="selection-imgs" aria-label="image three">
+          <div></div>
+        </div>
+        <div class="selection-imgs" aria-label="image four">
+          <div></div>
+        </div>
+      </div>
+    </section>
+    <section class="purchase-box">
+      <div class="company"></div>
+      <h1></h1>
+      <p>
+       
+      </p>
+      <div class="price-box">
+        <div class="price-discount">
+          <div class="price"></div>
+          <div class="dis-rate">-50%</div>
+        </div>
+        <div class="discount">
+          
+        </div>
+      </div>
+      <div class="add-cart-box">
+        <div class="add-remove">
+          <div id="minus" aria-label="lower amount">
+            <img src="../images/icon-minus.svg" alt="minus">
+          </div>
+          <span id="numToOrder">0</span>
+          <div id="plus" aria-label="increase amount">
+            <img src="../images/icon-plus.svg" alt="plus">
+          </div>
+        </div>
+        <button id="addCart">
+          <img src="../images/icon-cart-white.svg" alt="cart icon">
+          <span>Add to cart</span>
+        </button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <h1>Gallery</h1>
+    <ul>
+      <li><a href="../index/index.html">Home</a></li>
+      <li><a href="https://www.facebook.com">Contact</a></li>
+      <li><a href="../pay/pay.html">Configurer methode de paiement</a></li>
+    </ul>
+  </footer>
+    <script src="../commonJS/menu.js"></script>
+    <script src="../commonJS/collectionGuide.js"></script>
+    <script src="product.js"></script>
+
+</body>
+</html>

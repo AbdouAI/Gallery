@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/wrist-watch.png"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="style.css">
+  <title>gallery</title>
+
+
+</head>
+<body>
+  <header>
+    <div class="success-msg">
+      Your order has been placed successfully!
+    </div>
+    <div class="menu"  id="menu" aria-label="open menu">
+      <img src="../images/icon-menu.svg" alt="menu icon">
+    </div>
+    <a href="index.html" >
+      <h1>Gallery</h1>
+    </a>
+    <div class="curtain no-display" id="curtain"></div>
+    <div class="menu-box" id="menuBox">
+      <div id="closeMenu">
+        <img src="../images/icon-close.svg" alt="close">
+      </div>
+      <ul id="menuList">
+        <li class="firstLi"><a href="../index/index.html#luxury" >Collection</a><div class="underline"></div></li>
+        <ul class="guide-mobile">
+          <a href="index.html#luxury">Luxury</a>
+          <a href="index.html#sport">Sport</a>
+          <a href="index.html#women">Women</a>
+          <a href="index.html#men">Men</a>
+          <a href="#unique">Unique Watches</a>
+        </ul>
+        <li><a href="https://www.facebook.com" target="_blank">Contact</a><div class="underline"></div></li>
+        <li><a href="../pay/pay.html">Configurer methode de paiement</a><div class="underline"></div></li>
+      </ul>
+    </div>
+    <div class="cart" id="basket" aria-label="cart">
+      <div class="cart-notif no-visible" id="cartNotif">0</div>
+      <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg> 
+    </div>
+    <div class="avatar">
+      <img src="../images/image-avatar.png" alt="avatar">
+    </div>
+  </header>
+  <main>
+    <div class="basket no-display" id="basketBox">
+      <div class="word-cart">Cart</div>
+      <div class="inner-basket" id="innerBasket">
+        <div class="empty-cart-style">Your cart is empty</div>
+        <div class="cart-total-div no-display" id="cartTotalDiv">
+          <span>Total: </span><span id="cartTotal">0</span>
+        </div>
+        <button id="checkoutBtn" class="no-display">Checkout</button>
+      </div>
+    </div>
+    <div class="collection-guide no-display">
+      <div class="guide">
+        <ul>
+          <li><a href="#luxury">Luxury</a></li>
+          <li><a href="#sport">Sport</a></li>
+          <li><a href="#women">Women</a></li>
+          <li><a href="#men">Men</a></li>
+          <li><a href="#unique">Unique Watches</a></li>
+
+        </ul>
+      </div>
+      <div class="guide-img"></div>
+    </div>
+    <div class="popup">
+      <div class="close"><img src="../images/icon-close.svg" alt=""></div>
+    </div>
+    <div class="opt-in-container no-display">
+      <div class="opt-in">
+        <div class="opt-img"></div>  
+        <form method="post" action="" class="opt-form">
+          <p>Didnt find what you like? Stay updated about new arrivals!
+          </p>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" minlength="2" required >
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+          <input type="submit" id="sbmt">
+        </form>
+        <img src="../images/icone-close-white.svg" width="15px" height="15px" alt="">
+      </div>
+    </div>
+    <a href="#luxury">
+      <section class="productImg" id="productImg">
+        
+      </section>
+    </a>
+    <div class="arrows left-arrow" aria-label="previous image">
+      <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+    </div>
+    <div class="arrows right-arrow" aria-label="next image">
+      <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+    </div>
+
+    <div class="hot-item-container" onclick="createInfo(document.querySelector('#hotitem').children.item(6).textContent,document.querySelector('#hotitem').children.item(1).textContent,document.querySelector('#hotitem').children.item(2).textContent,document.querySelector('#hotitem').children.item(5).textContent,Number(document.querySelector('#hotitem').children.item(4).textContent),document.querySelector('#hotitem').children.item(6).textContent);location='../products/product.html'">
+      <div class="order hot-item-order">
+        <div class="hot-item">
+          <span>Hot</span><span>Item</span><span>Of</span><span>Today</span>
+        </div>
+        <div class="order-img"></div>
+        <div class="info">
+            <p>MAZZUCATO</p>
+            <p>RIM Reversable Automatic</p>
+            <p>$1400.00</p>
+        </div>
+      </div>
+      <div class="orange-band">
+        <img src="../images/dblArrow.png" alt="">
+      </div>
+    </div>
+    
+    <section class="luxury" id="luxury">
+      <div class="title"><img src="../images/sectionTitle/luxury.jpg" alt=""></div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/tagheuer/image-product-1.jpg" alt="">
+        </div>
+        <h2>CARRERA CHRONOGRAPH</h2>
+        <p>TAGHEUER</p>
+        <span>$</span><span>6500</span>
+        <p class="no-display description">With its striking signature TAG Heuer Carrera blue looks, this reinterpretation of the mythical Heuer Carrera makes a statement of classic elegance. Bringing out the best of the iconic Carrera with bold technical additions</p>
+        <span class="no-display product">tagheuer</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/hublot/image-product-1.jpg" alt="">
+        </div>
+        <h2>BIG BANG ORIGINAL GOLD</h2>
+        <p>HUBLOT</p>
+        <span>$</span><span>123000</span>
+        <p class="no-display description">POLISHED AND SATIN-FINISHED 18K 5N GOLD.BLACK STRUCTURED RUBBER STRAPS</p>
+        <span class="no-display product">hublot</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/tudor/image-product-1.jpg" alt="">
+        </div>
+        <h2>BLACK BAY</h2>
+        <p>TUDOR</p>
+        <span>$</span><span>30000</span>
+        <p class="no-display description">Manufacture Calibre MT5602-U 41mm steel case Steel bracelet</p>
+        <span class="no-display product">tudor</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/rolex/image-product-1.jpg" alt="">
+        </div>
+        <h2>GMT‑MASTER II</h2>
+        <p>ROLEX</p>
+        <span>$</span><span>57000</span>
+        <p class="no-display description">This model has a black dial and a two-tone gray and black ceramic Cerachrom bezel disc. The GMT‑Master II features an additional hand that circles the dial in 24 hours, in addition to the traditional hour, minute and second hands</p>
+        <span class="no-display product">rolex</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/tissot/image-product-1.jpg" alt="">
+        </div>
+        <h2>SEASTAR 1000 40MM</h2>
+        <p>TISSOT</p>
+        <span>$</span><span>27000</span>
+        <p class="no-display description">Traditional dive look with distinct hour, minutes and indexes coated with superluminova Uncompromising quality: 1000 feet / 30 bar water resistant</p>
+        <span class="no-display product">tissot</span>
+      </div>
+    </section>
+    <section class="sport" id="sport">
+      <div class="title"><img src="../images/sectionTitle/sports.jpg" alt=""></div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/garmin/image-product-1.jpg" alt="">
+        </div>
+        <h2>EPIX Gen 2 Sports Watch</h2>
+        <p>GARMIN</p>
+        <span>$</span><span>1699</span>
+        <p class="no-display description">Stunning 1.3” always-on AMOLED display brings your watch to life
+          Trusted button controls that work in any environment
+          See how you’re breathing throughout the day</p>
+        <span class="no-display product">garmin</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/hoff/image-product-1.jpg" alt="">
+        </div>
+        <h2>Racing 40 Chronograph Panda</h2>
+        <p>HOFFMAN</p>
+        <span>$</span><span>229</span>
+        <p class="no-display description">The Racing 40 is a reimagined vintage racing chronograph - classic features meet modern aesthetics. Inspired by watches from the 1960s.</p>
+        <span class="no-display product">hoff</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/timex/image-product-1.jpg" alt="">
+        </div>
+        <h2>UFC Pro 44mm</h2>
+        <p>TIMEX UFC</p>
+        <span>$</span><span>155</span>
+        <p class="no-display description">Showcasing hard lines and sleek architectural design, the TIMEX UFC Pro is a premium analog statement piece for any wrist. This watch reps our authenticity with pride, from the line-embossed UFC logo on the gold-tone dial and comfortable black band.</p>
+        <span class="no-display product">timex</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/citizen/image-product-1.jpg" alt="">
+        </div>
+        <h2>Brycen Chronograph</h2>
+        <p>CITIZEN</p>
+        <span>$</span><span>170</span>
+        <p class="no-display description">Choose the newly designed CITIZEN Brycen timepiece, powered by light, with distinguished features sure to stand out on your wrist.</p>
+        <span class="no-display product">citizen</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/th/image-product-1.jpg" alt="">
+        </div>
+        <h2>Men's Brown Leather Strap Watch</h2>
+        <p>TOMMY HILFIGER</p>
+        <span>$</span><span>500</span>
+        <p class="no-display description">A smart, sporty and sophisticated men's watch from Tommy Hilfiger. A luxe 44mm yellow gold tone case hosts a black multi-function sunray dial framed by a bold black IP bezel.</p>
+        <span class="no-display product">th</span>
+      </div>
+    </section>
+    <section class="women" id="women">
+      <div class="title"><img src="../images/sectionTitle/6494.jpg" alt=""></div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/ob/image-product-1.jpg" alt="">
+        </div>
+        <h2>Abstract Florals Blush</h2>
+        <p>OLIVIA BURTON</p>
+        <span>$</span><span>71</span>
+        <p class="no-display description">This on-trend timepiece works a sand-blasted face, featuring a carefully screen-printed abstract effect on top. It's taken to new heights by applied rose gold anemones that dance across its 30mm-wide dial.	</p>
+        <span class="no-display product">ob</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/bulova/image-product-1.jpg" alt="">
+        </div>
+        <h2>Octava Automatic Watch</h2>
+        <p>BULOVA</p>
+        <span>$</span><span>428</span>
+        <p class="no-display description">Bursting with bling, the Bulova Octava Chronograph Watch makes a dramatic style statement.This stunning timepiece is water resistant to 30 metres, so it’s splash proof and can even be submerged for short periods. Quartz movement ensures accurate timing, and hardwearing mineral glass means this watch will always look at its best.</p>
+        <span class="no-display product">bulova</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/mk/image-product-1.jpg" alt="">
+        </div>
+        <h2>Camille Watch</h2>
+        <p>MICHAEL KORS</p>
+        <span>$</span><span>181</span>
+        <p class="no-display description">Part of the Jetset collection, the Ladies Michael Kors Camille Chronograph Watch will grace any outfit with its chic good looks.</p>
+        <span class="no-display product">mk</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/ll/image-product-1.jpg" alt="">
+        </div>
+        <h2>Quartz Watch</h2>
+        <p>LOCKSLEY LONDON</p>
+        <span>$</span><span>67</span>
+        <p class="no-display description">The first ladies collection ever released for Locksley London, focused on creating a simple yet timeless style that is easy to wear but sophisticated in the detailing.</p>
+        <span class="no-display product">ll</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/boss/image-product-1.jpg" alt="">
+        </div>
+        <h2>Ladies Hugo Boss Watch</h2>
+        <p>BOSS</p>
+        <span>$</span><span>17900</span>
+        <p class="no-display description">BOSS ladies watch from the Majesty family. Featuring a 32mm light yellow gold IP case.</p>
+        <span class="no-display product">boss</span>
+      </div>
+    </section>
+    <section class="men" id="men">
+      <div class="title"><img src="../images/sectionTitle/men.jpg" alt=""></div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/llm/image-product-1.jpg" alt="">
+        </div>
+        <h2>Skeleton Automatic Watch</h2>
+        <p>LOCKSLEY LONDON</p>
+        <span>$</span><span>127</span>
+        <p class="no-display description">Skeleton watches are a classic treasure of watchmaking, allowing a clear view into the beating heart of the watch, and the components that interact and ultimately power the watch.
+          With this in mind, we developed this Locksley London Skeleton Automatic Watch as the ultimate expression of this, while remaining elegant, functional, dependable and affordable.
+        </p>
+        <span class="no-display product">llm</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/bossm/image-product-1.jpg" alt="">
+        </div>
+        <h2>Hero Lux Watch</h2>
+        <p>BOSS</p>
+        <span>$</span><span>279</span>
+        <p class="no-display description">BOSS gents watch from the Hero family. Featuring a 43mm stainless steel case, crown protection, tachymeter bezel, blue dial, stainless steel bracelet and push button deployment. Water resistant to 5ATM.</p>
+        <span class="no-display product">bossm</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/jng/image-product-1.jpg" alt="">
+        </div>
+        <h2>Mens FORM C Chronograph</h2>
+        <p>JUNGHANS</p>
+        <span>$</span><span>540</span>
+        <p class="no-display description">The Junghans watch brand takes pride in a long history of tradition running hand-in-hand with modernity, resulting in more than a century and a half of quality German watch-making precision. This Junghans watch collection brings together feature pieces from both the Bauhaus-inspired Max Bill and Meister lines.</p>
+        <span class="no-display product">jng</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/hugo/image-product-1.jpg" alt="">
+        </div>
+        <h2>Mens Smash Watch</h2>
+        <p>HUGO</p>
+        <span>$</span><span>170</span>
+        <p class="no-display description">HUGO gents watch from the #SMASH family. Featuring a 43mm blue IP case, blue dial and blue IP mesh bracelet. Water resistant to 5ATM.</p>
+        <span class="no-display product">hugo</span>
+      </div>
+      <div class="product-box" onclick="location='../products/product.html'">
+        <div class="product-img">
+          <img src="../images/armani/image-product-1.jpg" alt="">
+        </div>
+        <h2>Armani Exchange Watch AX1335</h2>
+        <p>ARMANI EXCHANGE</p>
+        <span>$</span><span>107</span>
+        <p class="no-display description">Armani Exchange AX1335 is a functional and special Gents watch. Case is made out of Plastic/Resin, which stands for a high quality of the item and the Blue dial gives the watch that unique look.</p>
+        <span class="no-display product">armani</span>
+      </div>
+    </section>
+
+    <section class="unique" id="unique">
+      <div class="unique-title"><h2>Unique Watches</h2></div>
+      <div class="outer-container">
+        <div class="shadow shadowL"></div>
+        <div class="container">
+          <div class="product-box" id="hotitem" onclick="location='../products/product.html'">
+            <div class="product-img">
+              <img src="../images/mazz/image-product-1.jpg" alt="">
+            </div>
+            <h2>RIM Reversible Automatic</h2>
+            <p>MAZZUCATO</p>
+            <span>$</span><span>1400</span>
+            <p class="no-display description">The most striking thing about the RIM watch by Mazzucato is the design. Inspiration is drawn from the world of motor racing, where everything is honed down to the smallest detail.</p>
+            <span class="no-display product">mazz</span>
+          </div>
+          <div class="product-box" onclick="location='../products/product.html'">
+            <div class="product-img">
+              <img src="../images/bovetg/image-product-1.jpg" alt="">
+            </div>
+            <h2>Virtuoso VIII Chapter Two</h2>
+            <p>BOVET</p>
+            <span>$</span><span>70000</span>
+            <p class="no-display description">the Bovet Fleurier collection hangs over the luxurious segment of the watchmaking industry with a sensuous stance. With exhibit case back and complex complications inside the Bovet Fleurier collection.</p>
+            <span class="no-display product">bovetg</span>
+          </div>
+          <div class="product-box" onclick="location='../products/product.html'">
+            <div class="product-img">
+              <img src="../images/urwek/image-product-1.jpg" alt="">
+            </div>
+            <h2>Ur-Satellite</h2>
+            <p>URWEK</p>
+            <span>$</span><span>799</span>
+            <p class="no-display description">The Urwerk Ur-Satellite was first launched in 2011 with the Ur-210 series. It gained instant recognition for its complicated way of timekeeping. </p>
+            <span class="no-display product">urwek</span>
+          </div>
+          <div class="product-box" onclick="location='../products/product.html'">
+            <div class="product-img">
+              <img src="../images/br/image-product-1.jpg" alt="">
+            </div>
+            <h2>BR 01 Cyber Skull Bronze 46 mm</h2>
+            <p>BELL & ROSS</p>
+            <span>$</span><span>2389</span>
+            <p class="no-display description">This brand is preferred by special forces around the world and is one of the few that provides these forces with rugged mechanical watches. Apart from its ruggedness, the brand is also known for creating concept vehicles inspired by the military aviation industry.</p>
+            <span class="no-display product">br</span>
+          </div>
+          <div class="product-box" onclick="location='../products/product.html'">
+            <div class="product-img">
+              <img src="../images/eone/image-product-1.jpg" alt="">
+            </div>
+            <h2>Bradley Element Black </h2>
+            <p>EONE</p>
+            <span>$</span><span>150</span>
+            <p class="no-display description">The Bradley Element features an innovative, three-dimensional surface unlike any of the other Bradley models. The topography of the watch face contours toward each marker in alternating raised and lowered impressions.</p>
+            <span class="no-display product">eone</span>
+          </div>
+          <div class="product-box" onclick="location='../products/product.html'">
+            <div class="product-img">
+              <img src="../images/waldhoff/image-product-1.jpg" alt="">
+            </div>
+            <h2>Waldhoff Multimatic Emerald</h2>
+            <p>WALDHOFF</p>
+            <span>$</span><span>499</span>
+            <p class="no-display description">The Multimatic's striking presence stands out from every angle, and nothing was spared in terms of features.</p>
+            <span class="no-display product">waldhoff</span>
+          </div>
+          <div class="product-box" onclick="location='../products/product.html'">
+            <div class="product-img">
+              <img src="../images/bovet/image-product-1.jpg" alt="">
+            </div>
+            <h2>Amadeo Fleurier</h2>
+            <p>BOVET</p>
+            <span>$</span><span>50000</span>
+            <p class="no-display description">For centuries, Bovet is known for its intricate dial designs and detailing. The Bovet Fleurier collection depicts the historical techniques at their best.</p>
+            <span class="no-display product">bovet</span>
+          </div>
+        </div>
+        <div class="shadow shadowR"></div>
+      </div>
+    </section>
+    <section class="bottom">
+      <p>Don't watch the clock.Do what it does;<i>Keep going</i>. </p>
+    </section>
+  </main>
+  <footer>
+    <h1>Gallery</h1>
+    <ul>
+      <li><a href="index.html">Collection</a></li>
+      <li><a href="https://www.facebook.com">Contact</a></li>
+      <li><a href="../pay/pay.html">Configurer methode de paiement</a></li>
+    </ul>
+  </footer>
+    <script src="../commonJS/menu.js"></script>
+    <script src="../commonJS/collectionGuide.js"></script>
+    <script src="basket.js"></script>
+    <script src="banner.js"></script>
+    <script src="popup.js"></script>
+    <script src="optin.js"></script>
+    <script>
+      listProducts=[]
+      let products=document.querySelectorAll(".product-box")
+      for(prd of products){
+        listProducts.push(prd) 
+      }
+      listProducts.forEach(e =>e.addEventListener("click",()=>{
+        createInfo(e.children.item(6).textContent,e.children.item(1).textContent,e.children.item(2).textContent,e.children.item(5).textContent,Number(e.children.item(4).textContent),e.children.item(6).textContent)
+        
+      }));
+      
+      function createInfo(img,name,company,description,price,product){
+          let currentProduct={
+          "img":img,
+          "name":name,
+          "company":company,
+          "description":description,
+          "price":price,
+          "product":product
+        }
+        localStorage.setItem("currentProduct",JSON.stringify(currentProduct))
+        location="../products/product.html"
+      }   
+             
+    </script>
+  </main>
+</body>
+</html>
