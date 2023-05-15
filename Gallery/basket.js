@@ -51,7 +51,7 @@ checkOut.addEventListener("click",()=>{
             document.querySelector(".success-msg").classList.remove("move-down")
         }, 3000); 
     }else{
-        location="../pay/pay.html"
+        location="pay/pay.html"
     }
 })
 
@@ -67,10 +67,10 @@ function addToCart(img,name,price,numOrdered,total,product){
         <p>${name}</p>
         <p>$${price}.00 x ${numOrdered} <span id="total">$${total}</span></p>
     </div>
-    <img src="../images/icon-delete.svg" alt="delete" class="delete-icon">
+    <img src="images/icon-delete.svg" alt="delete" class="delete-icon">
     `
     cartTotalDiv.before(order)
-    document.querySelector(`#${product}>.order-img`).style.backgroundImage=`url(../images/${img}/image-product-1.jpg)`
+    document.querySelector(`#${product}>.order-img`).style.backgroundImage=`url(images/${img}/image-product-1.jpg)`
 
 }
 

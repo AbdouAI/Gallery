@@ -288,7 +288,7 @@ ul.guide-mobile{
 
 .productImg{
     height: 24rem;
-    background-image:url(../images/banner/watch1.jpg);
+    background-image:url(images/banner/watch1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -339,7 +339,7 @@ ul.guide-mobile{
     top: 50%;
     left: -11rem;
     z-index: 14;
-    background-image: url(../images/50off.jpg);
+    background-image: url(images/50off.jpg);
     background-size: contain;
     transition: left .6s ease;
 }
@@ -394,7 +394,7 @@ ul.guide-mobile{
 .opt-img{
     width: 100%;
     height: 50%;
-    background-image: url(../images/optin.jpg);
+    background-image: url(images/optin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -482,7 +482,7 @@ ul.guide-mobile{
     height: 8rem;
     position: relative;
     z-index: 10;
-    background-image: url(../images/hotitem.avif);
+    background-image: url(images/hotitem.avif);
     background-repeat: no-repeat;
     background-size: cover;
     transition: transform .5s ease;
@@ -494,7 +494,7 @@ ul.guide-mobile{
 }
 
 .hot-item-order .order-img{
-    background-image: url(../images/mazz/image-product-1.jpg);
+    background-image: url(images/mazz/image-product-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color:rgba(255, 255, 255,.5);
@@ -568,11 +568,11 @@ section .title{
 }
 
 .luxury{
-    background-image: url(../images/luxBG.jpg);
+    background-image: url(images/luxBG.jpg);
 }
 
 .luxury .product-box{
-    border-image-source: url(../images/luxBRDR.png);
+    border-image-source: url(images/luxBRDR.png);
     border-image-slice:
     27 250 27 172;
     border-image-width:
@@ -592,7 +592,7 @@ section .title{
 }
 
 .sport{
-    background-image: url(../images/sport1.jpg)
+    background-image: url(images/sport1.jpg)
 
 }
 
@@ -635,7 +635,7 @@ section .title{
 
 
 .women{
-    background-image: url(../images/5898260.jpg);
+    background-image: url(images/5898260.jpg);
 }
 
 .women .product-box{
@@ -664,7 +664,7 @@ section .title{
 
 
 .men{
-    background-image: url(../images/men4.webp);
+    background-image: url(images/men4.webp);
 }
 
 .men .product-box{
@@ -697,7 +697,7 @@ section .title{
     font-size: 3rem;
 }
 .unique{
-    background:url(../images/uw.webp);
+    background:url(images/uw.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -753,7 +753,7 @@ section .title{
 
 
 .bottom{
-    background-image: url(../images/bottom.jpg);
+    background-image: url(images/bottom.jpg);
     background-position:center;
     background-position:0rem calc(center+7rem);
     background-repeat: no-repeat;

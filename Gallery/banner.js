@@ -30,7 +30,7 @@ rightArrow.forEach(e=>e.addEventListener("click",()=>{
 function changeImg(imgNum){
     productImg.classList.add("zero-opacity")
     setTimeout(() => {
-        productImg.style.backgroundImage=` url(../images/banner/watch${imgNum}.jpg)`
+        productImg.style.backgroundImage=` url(images/banner/watch${imgNum}.jpg)`
         productImg.classList.remove("zero-opacity")
     }, 300);
 
